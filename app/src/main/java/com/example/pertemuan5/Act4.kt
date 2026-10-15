@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun FormDataDiri(modifier: Modifier) {
-    //variabel-variabel untuk mengingat nilai masukan dari keyboard
+    // variabel-variabel untuk mengingat nilai masukan dari keyboard
     var textNama by remember { mutableStateOf(value = "") }
     var textAlamat by remember { mutableStateOf(value = "") }
     var textJK by remember { mutableStateOf(value = "") }
@@ -100,15 +100,8 @@ fun FormDataDiri(modifier: Modifier) {
                 alamat=textAlamat
             }
         ) {
-            Divider(
-                modifier = Modifier.padding(bottom =
-                    dimensionResource(id = R.dimen.padding_medium), top = dimensionResource(
-                    id = R.dimen.padding_medium
-                )),
-                thickness = dimensionResource(id = R.dimen.divider_tipis),
-                color = Color.DarkGray
-            )
-
+            Text(text = "Submit")
+        }
             ElevatedCard (
                 elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.Black),
@@ -124,4 +117,3 @@ fun FormDataDiri(modifier: Modifier) {
             }
         }
     }
-}
